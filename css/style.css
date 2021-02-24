@@ -288,6 +288,10 @@ footer ul li a i {
   nav li + li {
     margin-left: 0 !important;
   }
+  nav ul {
+    text-align: center;
+    margin-right: 0;
+  }
   nav ul li {
     display: block;
     margin-top: 10px;
