@@ -15,6 +15,7 @@ $color-one: #fff;
 $color-two: #FED136;
 $color-three: #000;
 $color-four: #777;
+$color-five: #F7F7F7;
 
 /* Global */
 
@@ -47,6 +48,16 @@ h3 + p {
   color: $color-four;
   font-style: italic;
   margin: 0;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: $font-one;
+  font-weight: 600;
+}
+h4 + p {
+  color: $color-four;
+  font-size: 14px;
 }
 
 /* Header */
@@ -150,14 +161,40 @@ header {
       line-height: 75px;
       text-align: center;
     }
-    h4 {
-      font-size: 18px;
-      font-family: $font-one;
-      font-weight: 600;
+  }
+}
+
+/* Portfolio */
+
+.portfolio {
+  padding: 80px 0;
+  background-color: $color-five;
+  .projects {
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 40px;
+    .project--container {
+      background-color: $color-one;
+      .project--description {
+        padding: 20px 0;
+      }
+      h4 {
+        margin: 0;
+        margin-top: 40px;
+      }
+      p {
+        margin: 0;
+        font-style: italic;
+      }
     }
-    h4 + p {
-      color: $color-four;
-      font-size: 14px;
-    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 350px;
+      opacity: 1;
+      display: block;  
+  }
   }
 }
