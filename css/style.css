@@ -180,6 +180,8 @@ header .header--text button:hover, header .header--text button:focus {
 
 .portfolio .projects .project--container {
   background-color: #fff;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 .portfolio .projects .project--container .project--description {
@@ -194,6 +196,11 @@ header .header--text button:hover, header .header--text button:focus {
 .portfolio .projects .project--container p {
   margin: 0;
   font-style: italic;
+}
+
+.portfolio .projects .project--container:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em #777;
+  transform: translateY(-0.25em);
 }
 
 .portfolio .projects img {
@@ -251,5 +258,62 @@ footer ul li a {
 footer ul li a i {
   font-size: 24px;
   color: #fff;
+}
+
+/* Responsivness */
+@media (min-width: 769px) and (max-width: 990px) {
+  .nav--text {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .header--text {
+    margin-top: 20px !important;
+  }
+  .projects {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-rows: (1fr)[3] !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav--text {
+    display: block;
+    text-align: center;
+  }
+  header {
+    height: auto;
+  }
+  nav li + li {
+    margin-left: 0 !important;
+  }
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+  }
+  .header--text {
+    margin-top: 0 !important;
+    margin-bottom: 40px;
+  }
+  .header--text h1 {
+    font-size: 24px !important;
+  }
+  .header--text h2 {
+    font-size: 18px !important;
+  }
+  .projects {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (1fr)[6] !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+  }
+  footer {
+    text-align: center;
+  }
+  footer ul {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

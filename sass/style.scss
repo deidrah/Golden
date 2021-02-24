@@ -177,6 +177,8 @@ header {
     grid-gap: 40px;
     .project--container {
       background-color: $color-one;
+      transition: 0.25s;
+      cursor: pointer;
       .project--description {
         padding: 20px 0;
       }
@@ -187,6 +189,10 @@ header {
       p {
         margin: 0;
         font-style: italic;
+      }
+      &:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em $color-four;
+        transform: translateY(-0.25em);
       }
     }
     img {
@@ -233,6 +239,59 @@ footer {
                 color: $color-one;
             }
         }
+    }
+  }
+}
+
+/* Responsivness */
+
+@media (min-width: 769px) and (max-width: 990px) {
+  .nav--text {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .header--text {
+    margin-top: 20px !important;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav--text {
+    display: block;
+    text-align: center;
+  }
+  header {
+    height: auto;
+  }
+  nav li + li {
+    margin-left: 0 !important;
+  }
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+  }
+  .header--text {
+    margin-top: 0 !important;
+    margin-bottom: 40px;
+    h1 {
+      font-size: 24px !important;
+    }
+    h2 {
+      font-size: 18px !important;
+    }
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(6, 1fr) !important;
+  }
+  footer {
+    text-align: center;
+    ul {
+      justify-content: center;
     }
   }
 }
