@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  margin: 90px 0;
+  margin-top: 90px;
   text-align: center;
 }
 
@@ -203,5 +203,53 @@ header .header--text button:hover, header .header--text button:focus {
   height: 350px;
   opacity: 1;
   display: block;
+}
+
+/* Footer */
+footer {
+  padding: 30px 0;
+}
+
+footer p {
+  margin-top: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+
+footer ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+footer ul li {
+  font-size: 0;
+  margin-right: 15px;
+  transition: 1s ease;
+}
+
+footer ul li:hover {
+  transform: scale(1.2);
+}
+
+footer ul li a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+footer ul li a i {
+  font-size: 24px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
