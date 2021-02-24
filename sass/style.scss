@@ -1,11 +1,18 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Noto+Serif:ital@0;1&display=swap');
+@font-face {
+  font-family: Wisdom Script;
+  src: url(../fonts/wisdomscriptaj.otf);
+}
 
 /* Variables */
 
 $font-one: 'Montserrat', sans-serif;
 $font-two: 'Noto Serif', serif;
+$font-three: "Wisdom Script";
+$color-one: #fff;
+$color-two: #FED136;
 
 /* Global */
 
@@ -17,4 +24,82 @@ body {
     font-family: $font-two;
     margin: 0;
     padding: 0;
+    color: $color-one;
+}
+
+/* Header */
+
+header {
+  background: url(../images/header.jpg) no-repeat;
+  background-size: cover;
+  height: 80vh;
+  overflow: hidden;
+  div > a {
+    font-family: $font-three;
+    color: $color-two;
+    font-size: 26px;
+  }
+  nav {
+    margin: 40px 0;
+  }
+  ul {
+    margin-right: 40px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    padding: 0;
+    text-align: right;
+    font-family: $font-one;
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+            color: $color-one;
+            transition: all 1s ease;
+            text-transform: uppercase;
+            &:hover {
+                color: $color-two;
+            }
+        }   
+      } 
+    li + li {
+      margin-left: 30px;
+    }
+  }
+  .header--text {
+    text-align: center;
+    margin-top: 15vh;
+    h1 {
+      font-family: $font-one;
+      font-size: 75px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 15px;
+    }
+    h2 {
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 300;
+      margin: 0;
+    }
+  
+    button {
+      display: inline-block;
+      margin: 35px auto 0 auto;
+      padding: 20px 35px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: 0;
+      text-align: center;
+      text-decoration: none;
+      font-family: $font-one;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: $color-two;
+      color: $color-one;
+      transition: 0.25s;
+      text-transform: uppercase;
+    }
+  }
 }
